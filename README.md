@@ -4,7 +4,7 @@ The GDX Analytics Looker block for Chatbot Internal Reports
 
 ## Features
 
-This project includes [Snowplow](https://snowplowanalytics.com/) schemas and [Looker](https://looker.com/) LookML code to support measurement and reporting on how visitors are interacting with the [Better Homes](https://betterhomesbc.ca/) and [Better Buildings](https://betterbuildingsbc.ca/) websites.
+This project includes [Snowplow](https://snowplowanalytics.com/) schemas and [Looker](https://looker.com/).
 
 ## Requirements
  
