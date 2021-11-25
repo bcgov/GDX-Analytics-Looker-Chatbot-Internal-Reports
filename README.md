@@ -1,5 +1,7 @@
 # GDX-Analytics-Looker-Chatbot-Internal-Reports 
 
+[![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
+
 The GDX Analytics Looker block for Chatbot Internal Reports
 
 ## Features
