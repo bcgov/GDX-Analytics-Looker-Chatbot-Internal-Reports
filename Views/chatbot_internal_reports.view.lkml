@@ -11,6 +11,11 @@ view: chatbot_internal_reports {
     sql: ${TABLE}.sentiment_score ;;
   }
 
+  dimension: dashboard_id {
+    type: string
+    sql: ${TABLE}.dashboard_id ;;
+  }
+
   dimension: sentiment_magnitude {
     type: number
     sql: ${TABLE}.sentiment_magnitude ;;
@@ -19,11 +24,6 @@ view: chatbot_internal_reports {
   dimension: session_origin {
     type: string
     sql: ${TABLE}.sessionorigin ;;
-  }
-
-  dimension: conversation_index {
-    type: number
-    sql: ${TABLE}.conversation_index ;;
   }
 
   dimension: conversation_length {
