@@ -83,10 +83,10 @@ view: chatbot_internal_reports {
     sql: CASE WHEN training_result = 'False Negative' THEN 1 ELSE 0 END  ;;
   }
 
-  measure: positive_count {
+  measure: ok_count {
     group_label: "Conversation Rating Counts"
     type: sum
-    sql: CASE WHEN conversation_rating = 'Positive' THEN 1 ELSE 0 END  ;;
+    sql: CASE WHEN conversation_rating IN ('OK','ok','Ok','oK') THEN 1 ELSE 0 END  ;;
   }
 
   measure: negative_count {
@@ -98,5 +98,5 @@ view: chatbot_internal_reports {
   measure: other_count {
     group_label: "Conversation Rating Counts"
     type: sum
-    sql: CASE WHEN conversation_rating NOT IN ('Positive','Negative') THEN 1 ELSE 0 END  ;;
+    sql: CASE WHEN conversation_rating NOT IN ('OK','ok','Ok','oK','Negative') THEN 1 ELSE 0 END  ;;
   }}
