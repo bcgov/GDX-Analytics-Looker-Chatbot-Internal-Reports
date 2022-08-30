@@ -1,3 +1,4 @@
+# Version 1.1.0
 view: chatbot_internal_reports {
   sql_table_name: microservice.chatbot_reports ;;
 
