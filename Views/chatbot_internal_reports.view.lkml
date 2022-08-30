@@ -1,3 +1,4 @@
+# Version 1.1.0
 view: chatbot_internal_reports {
   sql_table_name: microservice.chatbot_reports ;;
 
@@ -41,10 +42,14 @@ view: chatbot_internal_reports {
     sql: ${TABLE}.session_id ;;
   }
 
+  dimension: time_fix {
+    type: date
+    sql: CASE WHEN timestamp <> '' THEN TO_TIMESTAMP(${TABLE}.timestamp,'YYYY-MM-DD HH24:MI:SS') ELSE NULL END;;
+  }
   dimension_group: timestamp {
     type: time
     timeframes: [raw, time, minute, minute10, time_of_day, hour_of_day, hour, date, day_of_month, day_of_week, week, month, quarter, year]
-    sql: CASE WHEN timestamp <> '' THEN TO_TIMESTAMP("timestamp",'YYYY-MM-DD HH24:MI:SS') ELSE NULL END ;;
+    sql: ${time_fix} ;;
   }
 
   dimension: matched_intent {
