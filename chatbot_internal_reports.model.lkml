@@ -1,8 +1,14 @@
-# Version 1.1.0
+# Version 1.2.0
 connection: "redshift_pacific_time"
 # Set the week start day to Sunday. Default is Monday
 week_start_day: monday
 
-include: "/Views/chatbot_internal_reports.view"                # include all views in the views/ folder in this project
+include: "/Views/*"                # include all views in the views/ folder in this project
 
-explore: chatbot_internal_reports {}
+explore: chatbot_internal_reports {
+  join: chatbot_key_dates {
+    sql_on: ${chatbot_internal_reports.timestamp_date} = ${chatbot_key_dates.date_date} ;;
+    relationship: many_to_one
+    }
+}
+explore: chatbot_key_dates {}
