@@ -1,4 +1,4 @@
-# Version 1.1.0
+# Version 1.2.0
 view: chatbot_internal_reports {
   sql_table_name: microservice.chatbot_reports ;;
 
@@ -104,4 +104,5 @@ view: chatbot_internal_reports {
     group_label: "Conversation Rating Counts"
     type: sum
     sql: CASE WHEN conversation_rating NOT IN ('OK','ok','Ok','oK','Negative') THEN 1 ELSE 0 END  ;;
-  }}
+  }
+}
