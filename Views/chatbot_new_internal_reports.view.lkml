@@ -1,7 +1,14 @@
 # Version 1.2.0
 view: chatbot_new_internal_reports {
-  sql_table_name: microservice.chatbot_newreports ;;
+  derived_table: {
+  sql: (SELECT 'GOV-COVID' AS which_bot, * FROM microservice.chatbot_newreports)
+        UNION ALL
+      (SELECT 'GOV-SERVNAV' AS which_bot, * FROM microservice.chatbot_servnavreports)
+      ;;
+  }
 
+
+  dimension: which_bot {}
   dimension: conf_score {
     type: string
     sql: ${TABLE}.conf_score ;;
