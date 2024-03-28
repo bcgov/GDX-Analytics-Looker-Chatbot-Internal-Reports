@@ -14,7 +14,8 @@ explore: chatbot_internal_reports {
 
 explore: chatbot_new_internal_reports {
   join: chatbot_key_dates {
-    sql_on: ${chatbot_new_internal_reports.timestamp_date} = ${chatbot_key_dates.date_date} ;;
+    sql_on: ${chatbot_new_internal_reports.timestamp_date} = ${chatbot_key_dates.date_date}
+        AND ${chatbot_new_internal_reports.which_bot}= ${chatbot_key_dates.which_bot} ;;
     relationship: many_to_one
   }
   sql_always_where: ${timestamp_date} IS NOT NULL ;;
