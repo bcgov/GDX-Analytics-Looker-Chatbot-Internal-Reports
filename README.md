@@ -1,4 +1,5 @@
-# GDX-Analytics-Looker-Chatbot-Internal-Reports 
+(GDXDSD-7719 TEST)
+# GDX-Analytics-Looker-Chatbot-Internal-Reports
 
 [![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
 
@@ -9,21 +10,21 @@ The GDX Analytics Looker block for Chatbot Internal Reports
 This project includes [Snowplow](https://snowplowanalytics.com/) schemas and [Looker](https://looker.com/).
 
 ## Requirements
- 
+
 Requires deployment onto a [Looker](https://looker.com/) instance with access to database tables as referenced by the '*.lkml' files.
- 
+
 ## Project Status
- 
+
 This project is in production and the GDX Analytics Team will continue to update and maintain the project as required.
 
 ## Related Repositories
- 
+
 ### [GDX-Analytics/](https://github.com/bcgov/GDX-Analytics)
 
 The central repository for work by the GDX Analytics Team.
- 
+
 ## Getting Help or Reporting an Issue
- 
+
 For any questions regarding this project, or for inquiries about starting a new analytics account, please contact the GDX Analytics Team.
 
 ## Contributors
