@@ -1,4 +1,3 @@
-(GDXDSD-7719 TEST)
 # GDX-Analytics-Looker-Chatbot-Internal-Reports
 
 [![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
